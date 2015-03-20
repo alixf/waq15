@@ -1,19 +1,24 @@
 ﻿#pragma strict
 
+public var speed = 1.0;
+
 function Start()
 {
-	print(Mathf.Atan2(-1, 0));
-	print(Mathf.Atan2(1, 0));
-	print(Mathf.Atan2(0, -1));
-	print(Mathf.Atan2(0, 1));
 }
 
-function Update()
+function FixedUpdate()
 {
-	var direction = new Vector2(Input.GetAxisRaw("Horizontal2"), Input.GetAxisRaw("Vertical2"));
-	if(direction.magnitude > 0.0)
+	var stick1 = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+	var stick2 = new Vector2(Input.GetAxis("Horizontal2"), Input.GetAxis("Vertical2"));
+	
+	if(stick2.magnitude > 0.0)
+		transform.eulerAngles.y = Mathf.Atan2(stick2.x, stick2.y) * Mathf.Rad2Deg;
+	if(stick1.magnitude > 0.0)
 	{
-		transform.rotation.y = Mathf.Atan2(direction.normalized.y, direction.normalized.x);
-		print(transform.rotation.y);
+		var direction = new Vector3(stick1.x, 0.0, stick1.y);
+		print(stick1);
+		GetComponent.<Rigidbody>().velocity = direction * speed;
 	}
+	else
+		GetComponent.<Rigidbody>().velocity = Vector3.zero;
 }

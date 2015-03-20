@@ -1,6 +1,7 @@
 ﻿#pragma strict
 
 var distanceSpan = 1.0;
+var particlesDie : ParticleSystem;
 private var distance = 0.0;
 
 function Start ()
@@ -16,7 +17,6 @@ function Update ()
 
 function Die()
 {
-	GetComponent.<Collider>().enabled = false;
-	GetComponent.<MeshRenderer>().enabled = false;
-	//GetComponent.<Rigidbody>().enabled = false;
+	Instantiate(particlesDie,transform.position,Quaternion.Euler(-90,0,0));
+	Destroy(this.gameObject);
 }

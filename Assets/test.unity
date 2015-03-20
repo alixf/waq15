@@ -2719,6 +2719,25 @@ MonoBehaviour:
   goal: {fileID: 245305914}
   enemyMaxCount: 50
   leftToKill: 5
+  waves:
+  - delay: 3
+    count: 1
+  - delay: 3.5
+    count: 1
+  - delay: 10
+    count: 1
+  - delay: 10.5
+    count: 1
+  - delay: 11
+    count: 1
+  - delay: 18
+    count: 1
+  - delay: 18.5
+    count: 1
+  - delay: 19
+    count: 1
+  - delay: 19.5
+    count: 1
 --- !u!4 &1638921869
 Transform:
   m_ObjectHideFlags: 0

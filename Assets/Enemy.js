@@ -6,11 +6,17 @@ private var hitClock = 0.0;
 var hitDuration	 = 0.0;
 var goalOffset = new Vector3(0.0, 0.0, 0.0);
 var health = 0;
+var ui : Transform;
 
 function Start()
 {
 	goalOffset.x = Random.value * 0.25;
 	goalOffset.z = Random.value * 0.25;
+	
+	var healthGauge = Instantiate(ui);
+	healthGauge.GetComponent.<UIFollow>().target = transform;
+	healthGauge.GetComponent.<HealthGaugeEnemy>().target = GetComponent.<Health>();
+	healthGauge.transform.SetParent(gameObject.Find("Canvas").transform);
 }
 
 function Update()

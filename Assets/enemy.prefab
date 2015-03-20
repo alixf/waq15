@@ -108,6 +108,7 @@ MonoBehaviour:
   hitDuration: 1.25
   goalOffset: {x: 0, y: 0, z: 0}
   health: 0
+  ui: {fileID: 22460260, guid: b6b297d70fe936a4f83cad53f3197593, type: 2}
 --- !u!135 &13539920
 SphereCollider:
   m_ObjectHideFlags: 1

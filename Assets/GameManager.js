@@ -23,7 +23,7 @@ function Update ()
 		pauseOpened = !pauseOpened;
 		Time.timeScale = pauseOpened ? 0.0 : 1.0;
 	}
-	if(enemySpawner.leftToKill == 0) // Win
+	if(enemySpawner.IsFinished()) // Win
 	{
 		winOverlay.gameObject.SetActive(true);
 	}

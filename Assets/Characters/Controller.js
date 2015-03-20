@@ -23,6 +23,7 @@ function FixedUpdate()
 			Input.GetButtonDown("P"+controllerId+" Start"))
 		{
 			created = true;
+			GameManager.playersCount++;
 			transform.position.y = this.y;
 		}
 	}

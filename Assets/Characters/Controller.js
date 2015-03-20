@@ -1,6 +1,7 @@
 ﻿#pragma strict
 
 public var speed = 1.0;
+public var controllerId = 0;
 
 function Start()
 {
@@ -8,8 +9,8 @@ function Start()
 
 function FixedUpdate()
 {
-	var stick1 = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-	var stick2 = new Vector2(Input.GetAxis("Horizontal2"), Input.GetAxis("Vertical2"));
+	var stick1 = new Vector2(Input.GetAxis("P"+controllerId+" A1"), Input.GetAxis("P"+controllerId+" A2"));
+	var stick2 = new Vector2(Input.GetAxis("P"+controllerId+" A4"), Input.GetAxis("P"+controllerId+" A5"));
 	
 	if(stick2.magnitude > 0.0)
 		transform.eulerAngles.y = Mathf.Atan2(stick2.x, stick2.y) * Mathf.Rad2Deg;

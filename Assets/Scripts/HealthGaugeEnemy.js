@@ -20,6 +20,5 @@ function Update ()
 	
 	var health : float = target.GetComponent.<Health>().health;
 	var maxHealth : float = target.GetComponent.<Health>().maxHealth;
-	print(health/maxHealth);
 	fill.fillAmount = health/maxHealth;
 }

@@ -7,6 +7,7 @@ var hitDuration	 = 0.0;
 var goalOffset = new Vector3(0.0, 0.0, 0.0);
 var health = 0;
 var ui : Transform;
+var color : int;
 
 function Start()
 {
@@ -47,7 +48,7 @@ function OnTriggerStay(collider : Collider)
 
 function OnTriggerEnter(collider : Collider)
 {
-	if(collider.CompareTag("Bullet"))
+	if(collider.CompareTag("Bullet") && collider.GetComponent.<Bullet>().color == color)
 	{
 		GetComponent.<Health>().health--;
 		collider.GetComponent.<Bullet>().Die();

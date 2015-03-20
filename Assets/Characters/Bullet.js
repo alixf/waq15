@@ -3,6 +3,7 @@
 var distanceSpan = 1.0;
 var particlesDie : ParticleSystem;
 private var distance = 0.0;
+var color = 1;
 
 function Start ()
 {

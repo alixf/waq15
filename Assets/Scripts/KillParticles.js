@@ -1,7 +1,9 @@
 ﻿#pragma strict
 
+var delay = 0.5;
+
 function Start () {
-	Destroy(this.gameObject,0.5);
+	Destroy(this.gameObject,delay);
 }
 
 function Update () {

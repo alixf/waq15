@@ -14,7 +14,7 @@ function Update()
 	clock += Time.deltaTime;
 	if(clock > 0.25)
 	{
-		if(Input.GetButton("Fire1"))
+		if(Input.GetAxis("Fire") < -0.5)
 		{
 			clock = 0.0;
 			var spawn = Instantiate(bulletPrefab).transform;

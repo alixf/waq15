@@ -1067,33 +1067,37 @@ MonoBehaviour:
   - {fileID: 444246}
   goal: {fileID: 413574}
   waves:
-  - delay: 3
-    count: 1
-    type: 1
-  - delay: 3.5
-    count: 1
-    type: 2
-  - delay: 10
-    count: 1
-    type: 0
-  - delay: 10.5
-    count: 1
-    type: 0
-  - delay: 11
-    count: 1
-    type: 0
-  - delay: 18
-    count: 1
-    type: 0
-  - delay: 18.5
-    count: 1
-    type: 0
-  - delay: 19
-    count: 1
-    type: 0
-  - delay: 19.5
-    count: 1
-    type: 0
+  - {fileID: 415254, guid: 0f88f24953ee5294a818d76c1378b1c1, type: 2}
+  - {fileID: 474146, guid: af7e8f4132b25974dac2419584d7a313, type: 2}
+  - {fileID: 494858, guid: 3b277d53db4764d48866b20d5a64450a, type: 2}
+  - {fileID: 415254, guid: 0f88f24953ee5294a818d76c1378b1c1, type: 2}
+  - {fileID: 474146, guid: af7e8f4132b25974dac2419584d7a313, type: 2}
+  - {fileID: 494858, guid: 3b277d53db4764d48866b20d5a64450a, type: 2}
+  - {fileID: 443154, guid: 9559e0b0d8cfed54085a067bfa08f143, type: 2}
+  - {fileID: 415030, guid: 9f6a40a41f8e02d49b38ed8a05712367, type: 2}
+  - {fileID: 471416, guid: dfa6c6ed9912f7e4ca942e86ea782401, type: 2}
+  - {fileID: 443154, guid: 9559e0b0d8cfed54085a067bfa08f143, type: 2}
+  - {fileID: 415030, guid: 9f6a40a41f8e02d49b38ed8a05712367, type: 2}
+  - {fileID: 471416, guid: dfa6c6ed9912f7e4ca942e86ea782401, type: 2}
+  - {fileID: 471416, guid: dfa6c6ed9912f7e4ca942e86ea782401, type: 2}
+  - {fileID: 421724, guid: ddaedd613f5b3854fb04dd43dfbe6d73, type: 2}
+  - {fileID: 443154, guid: 9559e0b0d8cfed54085a067bfa08f143, type: 2}
+  wavesTiming:
+  - 5
+  - 7
+  - 9
+  - 11
+  - 12
+  - 13
+  - 15
+  - 17
+  - 19
+  - 21
+  - 22
+  - 23
+  - 25
+  - 27
+  - 29
 --- !u!114 &11431454
 MonoBehaviour:
   m_ObjectHideFlags: 1

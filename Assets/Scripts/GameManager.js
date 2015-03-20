@@ -17,7 +17,7 @@ function Update ()
 	{
 		gameOverOverlay.gameObject.SetActive(true);
 	}
-	if(Input.GetKeyDown(KeyCode.Escape)) // Pause
+	if(Input.GetButtonDown("P1 Start") || Input.GetButtonDown("P2 Start") || Input.GetButtonDown("P3 Start")) // Pause
 	{
 		pauseOverlay.gameObject.SetActive(!pauseOpened);
 		pauseOpened = !pauseOpened;

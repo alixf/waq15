@@ -830,7 +830,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRate: .25
-  enemyPrefab: {fileID: 415254, guid: 0f88f24953ee5294a818d76c1378b1c1, type: 2}
+  enemyPrefabs:
+  - {fileID: 415254, guid: 0f88f24953ee5294a818d76c1378b1c1, type: 2}
+  - {fileID: 474146, guid: af7e8f4132b25974dac2419584d7a313, type: 2}
   particlesSpawn: {fileID: 19824890, guid: 7cc1138c3236b214a913f2e6a2d933ed, type: 2}
   spawnLocations:
   - {fileID: 426084}
@@ -838,27 +840,34 @@ MonoBehaviour:
   - {fileID: 445534}
   - {fileID: 444246}
   goal: {fileID: 413574}
-  enemyMaxCount: 50
-  leftToKill: 5
   waves:
   - delay: 3
     count: 1
+    type: 0
   - delay: 3.5
     count: 1
+    type: 1
   - delay: 10
     count: 1
+    type: 2
   - delay: 10.5
     count: 1
+    type: 0
   - delay: 11
     count: 1
+    type: 0
   - delay: 18
     count: 1
+    type: 0
   - delay: 18.5
     count: 1
+    type: 0
   - delay: 19
     count: 1
+    type: 0
   - delay: 19.5
     count: 1
+    type: 0
 --- !u!114 &11431454
 MonoBehaviour:
   m_ObjectHideFlags: 1

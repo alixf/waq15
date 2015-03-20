@@ -4,16 +4,15 @@ class Wave extends System.Object
 {
 	var delay : float;
 	var count : float;
+	var type : int;
 }
 
 var spawnRate : float;
-var enemyPrefab : Transform;
+var enemyPrefabs : Transform[];
 var particlesSpawn : ParticleSystem;
 var spawnLocations : Transform[];
 var goal : Transform;
-var enemyMaxCount : int;
 private var offset = new Vector3(0.1, 0.0, 0.0);
-public var leftToKill = 5;
 
 public var waves : Wave[];
 private var currentWaveIndex = 0;
@@ -29,14 +28,15 @@ function Update ()
 	clock += Time.deltaTime;
 	if(currentWaveIndex < waves.Length && clock >= waves[currentWaveIndex].delay)
 	{
-		spawnRandom(waves[currentWaveIndex].count);
+		spawnRandom(waves[currentWaveIndex]);
 		currentWaveIndex++;
 	}
 }
 
-function spawnRandom(enemyCount : int)
+function spawnRandom(wave : Wave)
 {
-	var spawn = Instantiate(enemyPrefab).transform;
+	var waveType = (wave.type) == 0 ? Mathf.Floor(Random.value * enemyPrefabs.Length) : wave.type-1;
+	var spawn = Instantiate(enemyPrefabs[waveType]).transform;
 	spawn.position = spawnLocations[Mathf.Floor(Random.value * spawnLocations.length)].position + offset;
 	offset = -offset;
 	Instantiate(particlesSpawn,spawn.position,Quaternion.Euler(-90,0,0));

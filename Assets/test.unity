@@ -475,7 +475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41f731a5d3ec32443a444ed55967e92c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 3
 --- !u!33 &684634971
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -511,7 +511,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!95 &684634974
 Animator:
@@ -694,6 +694,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnRate: .25
   enemyPrefab: {fileID: 415254, guid: 0f88f24953ee5294a818d76c1378b1c1, type: 2}
+  particlesSpawn: {fileID: 19824890, guid: 7cc1138c3236b214a913f2e6a2d933ed, type: 2}
   spawnLocations:
   - {fileID: 425536834}
   - {fileID: 421565211}

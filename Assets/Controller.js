@@ -16,8 +16,7 @@ function FixedUpdate()
 	if(stick1.magnitude > 0.0)
 	{
 		var direction = new Vector3(stick1.x, 0.0, stick1.y);
-		print(stick1);
-		GetComponent.<Rigidbody>().velocity = direction * speed;
+		GetComponent.<Rigidbody>().velocity = direction.normalized * speed;
 	}
 	else
 		GetComponent.<Rigidbody>().velocity = Vector3.zero;

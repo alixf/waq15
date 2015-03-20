@@ -7,6 +7,7 @@ var spawnLocations : Transform[];
 var goal : Transform;
 var enemyMaxCount : int;
 private var offset = new Vector3(0.1, 0.0, 0.0);
+public var leftToKill = 5;
 
 private var clock : float;
 

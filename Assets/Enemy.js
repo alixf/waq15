@@ -5,6 +5,7 @@ var speed : float;
 private var hitClock = 0.0;
 var hitDuration	 = 0.0;
 var goalOffset = new Vector3(0.0, 0.0, 0.0);
+var health = 0;
 
 function Start()
 {
@@ -19,6 +20,11 @@ function Update()
 	direction.y = 0;
 	
 	this.GetComponent.<Rigidbody>().velocity = direction.normalized * speed;
+	
+	if(GetComponent.<Health>().health <= 0)
+	{
+		Destroy(gameObject);
+	}
 }
 
 function OnTriggerStay(collider : Collider)
@@ -30,5 +36,14 @@ function OnTriggerStay(collider : Collider)
 			hitClock = 0.0;
 			collider.transform.parent.GetComponent.<Health>().health--;
 		}
+	}
+}
+
+function OnTriggerEnter(collider : Collider)
+{
+	if(collider.CompareTag("Bullet"))
+	{
+		GetComponent.<Health>().health--;
+		collider.GetComponent.<Bullet>().Die();
 	}
 }

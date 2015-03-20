@@ -123,10 +123,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 245305914}
   - 33: {fileID: 245305913}
-  - 135: {fileID: 245305912}
   - 23: {fileID: 245305911}
+  - 136: {fileID: 245305912}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: goal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -156,8 +156,8 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!135 &245305912
-SphereCollider:
+--- !u!136 &245305912
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -165,8 +165,9 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
   m_Radius: .5
+  m_Height: 3.68000007
+  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &245305913
 MeshFilter:
@@ -491,11 +492,11 @@ CapsuleCollider:
   m_GameObject: {fileID: 684634968}
   m_Material: {fileID: 13400000, guid: cf63880488ec29f43a759ecd9c6c5123, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 0
-  m_Radius: .300000012
-  m_Height: 1.60000002
+  m_Enabled: 1
+  m_Radius: .5
+  m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: .800000012, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &684634973
 Rigidbody:
   m_ObjectHideFlags: 0

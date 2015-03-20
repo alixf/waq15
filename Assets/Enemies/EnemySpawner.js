@@ -35,7 +35,7 @@ function Update ()
 
 function spawnRandom(wave : Wave)
 {
-	var waveType = (wave.type == 0) ? Mathf.Floor(Random.value * enemyPrefabs.Length) : wave.type-1;
+	var waveType = (wave.type == 0) ? Mathf.Floor(Random.value * Mathf.Min(GameManager.playersCount, enemyPrefabs.Length)) : wave.type-1;
 	var spawn = Instantiate(enemyPrefabs[waveType]).transform;
 	spawn.position = spawnLocations[Mathf.Floor(Random.value * spawnLocations.length)].position + offset;
 	offset = -offset;

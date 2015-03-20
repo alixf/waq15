@@ -316,7 +316,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 198294}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1.08000004}
+  m_LocalPosition: {x: 0, y: 0, z: -.209999993}
   m_LocalScale: {x: .670000017, y: .670000017, z: .670000017}
   m_Children:
   - {fileID: 473870}
@@ -432,7 +432,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 134094}
   m_LocalRotation: {x: .408217937, y: -.234569728, z: .109381676, w: .875426054}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 1.53999996, y: 6.67000008, z: -2.67000008}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 457544}
@@ -498,8 +498,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132994}
-  m_LocalRotation: {x: .477717131, y: 0, z: 0, w: .878513694}
-  m_LocalPosition: {x: 0, y: 5.48000002, z: -5.30999994}
+  m_LocalRotation: {x: .510950148, y: 0, z: 0, w: .859610379}
+  m_LocalPosition: {x: 0, y: 6.32999992, z: -4.73999977}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 488488}
@@ -877,7 +877,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 75e6a65f48369f740999eb997c8e8e71, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: .560000002
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1058,6 +1058,7 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 415254, guid: 0f88f24953ee5294a818d76c1378b1c1, type: 2}
   - {fileID: 474146, guid: af7e8f4132b25974dac2419584d7a313, type: 2}
+  - {fileID: 494858, guid: 3b277d53db4764d48866b20d5a64450a, type: 2}
   particlesSpawn: {fileID: 19824890, guid: 7cc1138c3236b214a913f2e6a2d933ed, type: 2}
   spawnLocations:
   - {fileID: 426084}

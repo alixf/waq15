@@ -23,7 +23,7 @@ function SetTarget(target : SegmentedHealth)
 		var fill = Instantiate(segment);
 		fill.transform.SetParent(layout);
 		fill.name = "segment"+i;
-		fill.GetComponent.<UI.Image>().color = target.segments[i].color == 1 ? Color.red : Color.blue;
+		fill.GetComponent.<UI.Image>().color = target.segments[i].color == 1 ? Color.red : target.segments[i].color == 2 ? Color.blue : Color.yellow;
 		fill.transform.localScale = new Vector3(1.0,1.0,1.0);
 	}
 }

@@ -22,6 +22,7 @@ function Update()
 			spawn.position = bulletSpawnLocation.position;
 			spawn.GetComponent.<Rigidbody>().velocity = transform.forward.normalized * speed;
 			spawn.name = "bullet";
+			GameObject.Find("wandSound").GetComponent.<AudioSource>().Play();
 		}
 	}
 }

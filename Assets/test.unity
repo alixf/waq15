@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: .00999999978
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: .211999997, g: .226999998, b: .259000003, a: 1}
+  m_AmbientSkyColor: {r: 1, g: .837931037, b: .308823526, a: 1}
   m_AmbientEquatorColor: {r: .114, g: .125, b: .133000001, a: 1}
   m_AmbientGroundColor: {r: .0469999984, g: .0430000015, b: .0350000001, a: 1}
   m_AmbientIntensity: 1
@@ -1442,6 +1442,42 @@ Prefab:
       propertyPath: m_Pitch
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 496608, guid: 216a80d1f3c2927409cece32f51c7e09, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 6.32999992
+      objectReference: {fileID: 0}
+    - target: {fileID: 496608, guid: 216a80d1f3c2927409cece32f51c7e09, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -4.73999977
+      objectReference: {fileID: 0}
+    - target: {fileID: 496608, guid: 216a80d1f3c2927409cece32f51c7e09, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: .510950148
+      objectReference: {fileID: 0}
+    - target: {fileID: 496608, guid: 216a80d1f3c2927409cece32f51c7e09, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: .859610379
+      objectReference: {fileID: 0}
+    - target: {fileID: 413574, guid: 216a80d1f3c2927409cece32f51c7e09, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -.209999993
+      objectReference: {fileID: 0}
+    - target: {fileID: 485836, guid: 216a80d1f3c2927409cece32f51c7e09, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 6.67000008
+      objectReference: {fileID: 0}
+    - target: {fileID: 485836, guid: 216a80d1f3c2927409cece32f51c7e09, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -2.67000008
+      objectReference: {fileID: 0}
+    - target: {fileID: 485836, guid: 216a80d1f3c2927409cece32f51c7e09, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.53999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 157926, guid: 216a80d1f3c2927409cece32f51c7e09, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 216a80d1f3c2927409cece32f51c7e09, type: 2}
   m_IsPrefabParent: 0
@@ -1879,6 +1915,14 @@ Prefab:
     - target: {fileID: 467232, guid: f025bae294b2bf24b8a9c7da03d53b1f, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11486966, guid: f025bae294b2bf24b8a9c7da03d53b1f, type: 2}
+      propertyPath: controllerId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445202, guid: f025bae294b2bf24b8a9c7da03d53b1f, type: 2}
+      propertyPath: controllerId
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f025bae294b2bf24b8a9c7da03d53b1f, type: 2}
@@ -2665,6 +2709,14 @@ Prefab:
     - target: {fileID: 441844, guid: 7603e67e9a927c448a4df29a22c164d9, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11410484, guid: 7603e67e9a927c448a4df29a22c164d9, type: 2}
+      propertyPath: controllerId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440036, guid: 7603e67e9a927c448a4df29a22c164d9, type: 2}
+      propertyPath: controllerId
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7603e67e9a927c448a4df29a22c164d9, type: 2}

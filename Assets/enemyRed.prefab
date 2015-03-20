@@ -13,7 +13,7 @@ GameObject:
   - 114: {fileID: 11433238}
   - 54: {fileID: 5488632}
   - 135: {fileID: 13539920}
-  - 114: {fileID: 11432742}
+  - 114: {fileID: 11487268}
   m_Layer: 10
   m_Name: enemyRed
   m_TagString: Enemy
@@ -28,7 +28,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 119394}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.25309932, y: 4.39966614e-17, z: -1.98143351}
+  m_LocalPosition: {x: 1.03799999, y: .25, z: -.959999979}
   m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -79,19 +79,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &11432742
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 119394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebb39b9b22393284e8a1d685672ad436, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 5
-  maxHealth: 5
 --- !u!114 &11433238
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -108,8 +95,29 @@ MonoBehaviour:
   hitDuration: 1.25
   goalOffset: {x: 0, y: 0, z: 0}
   health: 0
-  ui: {fileID: 22460260, guid: b6b297d70fe936a4f83cad53f3197593, type: 2}
+  ui: {fileID: 22416962, guid: a8b1c6d335fb32144896d38b30e01178, type: 2}
   color: 1
+--- !u!114 &11487268
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 119394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0acbb5ac8a289af408738feddbd195b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  segments:
+  - color: 1
+    health: 2
+    maxHealth: 0
+  - color: 1
+    health: 2
+    maxHealth: 0
+  currentSegment: 0
+  maxHealth: 0
+  remainingHealth: 8
 --- !u!135 &13539920
 SphereCollider:
   m_ObjectHideFlags: 1

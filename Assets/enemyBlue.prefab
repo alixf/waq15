@@ -13,7 +13,7 @@ GameObject:
   - 114: {fileID: 11407760}
   - 54: {fileID: 5432366}
   - 135: {fileID: 13561284}
-  - 114: {fileID: 11441224}
+  - 114: {fileID: 11471224}
   m_Layer: 10
   m_Name: enemyBlue
   m_TagString: Enemy
@@ -95,9 +95,9 @@ MonoBehaviour:
   hitDuration: 1.25
   goalOffset: {x: 0, y: 0, z: 0}
   health: 0
-  ui: {fileID: 22460260, guid: b6b297d70fe936a4f83cad53f3197593, type: 2}
+  ui: {fileID: 22416962, guid: a8b1c6d335fb32144896d38b30e01178, type: 2}
   color: 2
---- !u!114 &11441224
+--- !u!114 &11471224
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -105,11 +105,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 157036}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebb39b9b22393284e8a1d685672ad436, type: 3}
+  m_Script: {fileID: 11500000, guid: 0acbb5ac8a289af408738feddbd195b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 5
-  maxHealth: 5
+  segments:
+  - color: 2
+    health: 2
+    maxHealth: 0
+  - color: 2
+    health: 2
+    maxHealth: 0
+  currentSegment: 0
+  maxHealth: 0
+  remainingHealth: 8
 --- !u!135 &13561284
 SphereCollider:
   m_ObjectHideFlags: 1

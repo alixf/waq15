@@ -16,7 +16,7 @@ function Start()
 	
 	var healthGauge = Instantiate(ui);
 	healthGauge.GetComponent.<UIFollow>().target = transform;
-	healthGauge.GetComponent.<HealthGaugeEnemy>().target = GetComponent.<Health>();
+	healthGauge.GetComponent.<HealthGaugeEnemy>().target = GetComponent.<SegmentedHealth>();
 	healthGauge.transform.SetParent(gameObject.Find("Canvas").transform);
 }
 
@@ -28,7 +28,7 @@ function Update()
 	
 	this.GetComponent.<Rigidbody>().velocity = direction.normalized * speed;
 	
-	if(GetComponent.<Health>().health <= 0)
+	if(GetComponent.<SegmentedHealth>().remainingHealth <= 0)
 	{
 		Destroy(gameObject);
 	}
@@ -48,9 +48,17 @@ function OnTriggerStay(collider : Collider)
 
 function OnTriggerEnter(collider : Collider)
 {
-	if(collider.CompareTag("Bullet") && collider.GetComponent.<Bullet>().color == color)
+	if(collider.CompareTag("Bullet") && collider.GetComponent.<Bullet>().color == GetComponent.<SegmentedHealth>().GetCurrentColor())
 	{
-		GetComponent.<Health>().health--;
-		collider.GetComponent.<Bullet>().Die();
+		if(GetComponent.<Health>())
+		{
+			GetComponent.<Health>().health--;
+			collider.GetComponent.<Bullet>().Die();
+		}
+		else if(GetComponent.<SegmentedHealth>())
+		{
+			GetComponent.<SegmentedHealth>().doDamage(1.0);
+			collider.GetComponent.<Bullet>().Die();
+		}
 	}
 }

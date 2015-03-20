@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceSpan: 2
+  particlesDie: {fileID: 19824890, guid: 160f952349bee944384aa6c267d4f163, type: 2}
 --- !u!135 &13545822
 SphereCollider:
   m_ObjectHideFlags: 1

@@ -2,6 +2,7 @@
 
 var spawnRate : float;
 var enemyPrefab : Transform;
+var particlesSpawn : ParticleSystem;
 var spawnLocations : Transform[];
 var goal : Transform;
 var enemyMaxCount : int;
@@ -20,6 +21,7 @@ function Update ()
 		clock = 0.0;
 		var spawn = Instantiate(enemyPrefab).transform;
 		spawn.position = spawnLocations[Mathf.Floor(Random.value * spawnLocations.length)].position;
+		Instantiate(particlesSpawn,spawn.position,Quaternion.Euler(-90,0,0));
 		spawn.GetComponent.<Enemy>().goal = goal;
 		spawn.parent = transform;
 		spawn.name = "enemy";

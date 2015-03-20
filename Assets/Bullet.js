@@ -15,6 +15,11 @@ function Update ()
 		Die();
 }
 
+function OnTriggerEnter(c : Collider)
+{
+	Die();
+}
+
 function Die()
 {
 	Instantiate(particlesDie,transform.position,Quaternion.Euler(-90,0,0));

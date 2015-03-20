@@ -13,7 +13,7 @@ GameObject:
   - 136: {fileID: 13600878}
   - 114: {fileID: 11486966}
   - 114: {fileID: 11445202}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fairy
   m_TagString: Untagged
   m_Icon: {fileID: 0}

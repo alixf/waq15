@@ -14,7 +14,7 @@ GameObject:
   - 54: {fileID: 5488632}
   - 135: {fileID: 13539920}
   - 114: {fileID: 11432742}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -107,6 +107,7 @@ MonoBehaviour:
   speed: .5
   hitDuration: 1.25
   goalOffset: {x: 0, y: 0, z: 0}
+  health: 0
 --- !u!135 &13539920
 SphereCollider:
   m_ObjectHideFlags: 1

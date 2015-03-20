@@ -12,6 +12,5 @@ function Update()
 	var direction = (goal.position - transform.position);
 	direction.y = 0;
 	
-	this.GetComponent.<Rigidbody>().velocity = direction.normalized * speed;	
-	print(GetComponent.<Rigidbody>().velocity);
+	this.GetComponent.<Rigidbody>().velocity = direction.normalized * speed;
 }

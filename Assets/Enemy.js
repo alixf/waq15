@@ -14,3 +14,7 @@ function Update()
 	
 	this.GetComponent.<Rigidbody>().velocity = direction.normalized * speed;
 }
+
+function OnTriggerStay(collider : Collider)
+{
+}

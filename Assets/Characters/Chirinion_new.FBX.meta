@@ -1,0 +1,175 @@
+fileFormatVersion: 2
+guid: f612b324ca96ecf43a3393a9ed1677f4
+timeCreated: 1426952166
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Bip001 Footsteps
+    100002: Bip001 HeadNub
+    100004: Bip001 L Finger0
+    100006: Bip001 L Finger01
+    100008: Bip001 L Finger0Nub
+    100010: Bip001 L Finger1
+    100012: Bip001 L Finger11
+    100014: Bip001 L Finger1Nub
+    100016: Bip001 L Finger2
+    100018: Bip001 L Finger21
+    100020: Bip001 L Finger2Nub
+    100022: Bip001 L Finger3
+    100024: Bip001 L Finger31
+    100026: Bip001 L Finger3Nub
+    100028: Bip001 L Toe0Nub
+    100030: Bip001 R Finger0
+    100032: Bip001 R Finger01
+    100034: Bip001 R Finger0Nub
+    100036: Bip001 R Finger1
+    100038: Bip001 R Finger11
+    100040: Bip001 R Finger1Nub
+    100042: Bip001 R Finger2
+    100044: Bip001 R Finger21
+    100046: Bip001 R Finger2Nub
+    100048: Bip001 R Finger3
+    100050: Bip001 R Finger31
+    100052: Bip001 R Finger3Nub
+    100054: Bip001 R Toe0Nub
+    100056: //RootNode
+    100058: Gobelin
+    100060: Head
+    100062: Hips
+    100064: LeftArm
+    100066: LeftFoot
+    100068: LeftForeArm
+    100070: LeftHand
+    100072: LeftLeg
+    100074: LeftShoulder
+    100076: LeftToeBase
+    100078: LeftUpLeg
+    100080: Neck
+    100082: Pelvis
+    100084: RightArm
+    100086: RightFoot
+    100088: RightForeArm
+    100090: RightHand
+    100092: RightLeg
+    100094: RightShoulder
+    100096: RightToeBase
+    100098: RightUpLeg
+    100100: Spine
+    100102: Spine1
+    100104: Spine2
+    400000: Bip001 Footsteps
+    400002: Bip001 HeadNub
+    400004: Bip001 L Finger0
+    400006: Bip001 L Finger01
+    400008: Bip001 L Finger0Nub
+    400010: Bip001 L Finger1
+    400012: Bip001 L Finger11
+    400014: Bip001 L Finger1Nub
+    400016: Bip001 L Finger2
+    400018: Bip001 L Finger21
+    400020: Bip001 L Finger2Nub
+    400022: Bip001 L Finger3
+    400024: Bip001 L Finger31
+    400026: Bip001 L Finger3Nub
+    400028: Bip001 L Toe0Nub
+    400030: Bip001 R Finger0
+    400032: Bip001 R Finger01
+    400034: Bip001 R Finger0Nub
+    400036: Bip001 R Finger1
+    400038: Bip001 R Finger11
+    400040: Bip001 R Finger1Nub
+    400042: Bip001 R Finger2
+    400044: Bip001 R Finger21
+    400046: Bip001 R Finger2Nub
+    400048: Bip001 R Finger3
+    400050: Bip001 R Finger31
+    400052: Bip001 R Finger3Nub
+    400054: Bip001 R Toe0Nub
+    400056: //RootNode
+    400058: Gobelin
+    400060: Head
+    400062: Hips
+    400064: LeftArm
+    400066: LeftFoot
+    400068: LeftForeArm
+    400070: LeftHand
+    400072: LeftLeg
+    400074: LeftShoulder
+    400076: LeftToeBase
+    400078: LeftUpLeg
+    400080: Neck
+    400082: Pelvis
+    400084: RightArm
+    400086: RightFoot
+    400088: RightForeArm
+    400090: RightHand
+    400092: RightLeg
+    400094: RightShoulder
+    400096: RightToeBase
+    400098: RightUpLeg
+    400100: Spine
+    400102: Spine1
+    400104: Spine2
+    4300000: Gobelin
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Gobelin
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

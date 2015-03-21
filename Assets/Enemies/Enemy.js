@@ -8,6 +8,8 @@ var goalOffset = new Vector3(0.0, 0.0, 0.0);
 var health = 0;
 var ui : Transform;
 var color : int;
+var model : SkinnedMeshRenderer;
+var alive = true;
 
 function Start()
 {
@@ -17,13 +19,16 @@ function Start()
 	var healthGauge = Instantiate(ui);
 	healthGauge.GetComponent.<UIFollow>().target = transform;
 	healthGauge.GetComponent.<HealthGaugeEnemy>().target = GetComponent.<SegmentedHealth>();
-	//healthGauge.transform.SetParent(gameObject.Find("Canvas").transform);
+	healthGauge.transform.SetParent(gameObject.Find("Canvas").transform);
 }
 
 function Update()
 {
-	if(GetComponent.<SegmentedHealth>().remainingHealth <= 0)
-		Destroy(gameObject);
+	if(alive && GetComponent.<SegmentedHealth>().remainingHealth <= 0)
+	{
+		alive = false;
+		Die();
+	}
 		
 	hitClock += Time.deltaTime;
 	var direction = (goal.position+goalOffset - transform.position);
@@ -46,6 +51,18 @@ function OnTriggerStay(collider : Collider)
 			hitClock = 0.0;
 			collider.transform.parent.GetComponent.<Health>().health--;
 		}
+	}
+}
+
+function SetColor(color : int)
+{
+Debug.Log(color);
+	this.color = color;
+	switch(color)
+	{
+	case 1: model.material.color = Color.red; break;
+	case 2: model.material.color = Color.blue; break;
+	case 3: model.material.color = Color.yellow; break;
 	}
 }
 
@@ -76,6 +93,5 @@ function OnTriggerEnter(collider : Collider)
 
 function Die()
 {
-	
-		transform.GetChild(0).GetComponent.<Animator>().SetTrigger("die");
+	transform.GetChild(0).GetComponent.<Animator>().SetTrigger("Die");
 }

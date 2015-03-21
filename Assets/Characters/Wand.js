@@ -12,12 +12,12 @@ function Start()
 function Update()
 {
 	clock += Time.deltaTime;
+	var cid = GetComponent.<Fairy>().controllerId;
+	var color = GetComponent.<Fairy>().color;
+	var stick2 = new Vector2(Input.GetAxisRaw("P"+cid+" A4"), Input.GetAxisRaw("P"+cid+" A5"));
 	if(clock > 0.25)
 	{
-		var cid = GetComponent.<Fairy>().controllerId;
-		var color = GetComponent.<Fairy>().color;
 		
-		var stick2 = new Vector2(Input.GetAxisRaw("P"+cid+" A4"), Input.GetAxisRaw("P"+cid+" A5"));
 		if(stick2.magnitude > 0.0)
 		{
 			clock = 0.0;
@@ -28,6 +28,14 @@ function Update()
 			bullet.GetComponent.<Rigidbody>().velocity = transform.forward.normalized * speed;
 			bullet.name = "bullet";
 			GameObject.Find("wandSound").GetComponent.<AudioSource>().Play();
+			
+			transform.Find("animation").GetComponent.<Animator>().SetBool("Attack", true);
 		}
+	}
+	
+	
+	if(stick2.magnitude <= 0.0)
+	{
+		transform.Find("animation").GetComponent.<Animator>().SetBool("Attack", false);
 	}
 }

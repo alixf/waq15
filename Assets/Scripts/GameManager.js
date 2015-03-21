@@ -1,5 +1,7 @@
 ﻿#pragma strict
 
+import UnityEngine.UI;
+
 var goal : Health;
 var gameOverOverlay : Transform;
 var winOverlay : Transform;
@@ -23,9 +25,7 @@ function Update ()
 	}
 	if(Input.GetButtonDown("P1 Start") || Input.GetButtonDown("P2 Start") || Input.GetButtonDown("P3 Start")) // Pause
 	{
-		pauseOverlay.gameObject.SetActive(!pauseOpened);
-		pauseOpened = !pauseOpened;
-		Time.timeScale = pauseOpened ? 0.0 : 1.0;
+		TogglePause();
 	}
 	if(enemySpawner.IsFinished()) // Win
 	{
@@ -43,10 +43,9 @@ function Update ()
 				Input.GetAxis("P"+(i+1)+" A5") != 0.0f ||
 				Input.GetButtonDown("P"+(i+1)+" Start"))
 			{
-				print("OK");
-				var fairy = Instantiate(fairyPrefab);
-				fairy.GetComponent.<FairyController>().SetColor(++playersCount);
-				fairy.GetComponent.<FairyController>().controllerId = (i+1);
+				var fairy = Instantiate(fairyPrefab, fairyPrefab.position, fairyPrefab.rotation);
+				fairy.GetComponent.<Fairy>().SetColor(++playersCount);
+				fairy.GetComponent.<Fairy>().controllerId = (i+1);
 				controllerMap[i] = true;
 			}
 		}
@@ -61,4 +60,15 @@ public function Restart()
 public function Quit()
 {
 	Application.Quit();
+}
+public function TogglePause()
+{
+	pauseOverlay.gameObject.SetActive(!pauseOpened);
+	pauseOpened = !pauseOpened;
+	if(pauseOpened)
+	{
+		//EventSystemManager.currentSystem.SetSelectedGameObject(gameObject.Find("resumeButton").GetComponent.<UI.Button>(), null);
+		//gameObject.Find("resumeButton").GetComponent.<UI.Button>().Select();
+		}
+	Time.timeScale = pauseOpened ? 0.0 : 1.0;
 }

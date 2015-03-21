@@ -27,7 +27,7 @@ function Start ()
 
 function Update ()
 {
-	if(currentWaveIndex < waves.Length && currentWaveIndex < wavesTiming.Length)
+	if(GameManager.playersCount > 0 && currentWaveIndex < waves.Length && currentWaveIndex < wavesTiming.Length)
 	{
 		clock += Time.deltaTime;
 		var delay : float = wavesTiming[currentWaveIndex];
@@ -54,6 +54,7 @@ function spawnWave(enemy : Transform)
 	spawn.position = spawnLocations[Mathf.Floor(Random.value * spawnLocations.length)].position + offset;
 	offset = -offset;
 	Instantiate(particlesSpawn,spawn.position,Quaternion.Euler(-90,0,0));
+	spawn.GetComponent.<Enemy>().SetColor(toSpawn+1);
 	spawn.GetComponent.<Enemy>().goal = goal;
 	spawn.parent = transform;
 	spawn.name = "enemy";

@@ -2,7 +2,8 @@
 
 public var speed = 1.0;
 public var color = 0;
-@HideInInspector public var controllerId = 0;
+public var controllerId = 0;
+public var model : SkinnedMeshRenderer;
 
 function Start()
 {
@@ -26,12 +27,13 @@ function FixedUpdate()
 
 function SetColor(color : int)
 {
-	/*
+	this.color = color;
+	
 	switch(color)
 	{
-	case 1: GetComponent.<Material>().color = Color.red; break;
-	case 2: GetComponent.<Material>().color = Color.blue; break;
-	case 3: GetComponent.<Material>().color = Color.yellow; break;
+	case 1: model.material.color = Color.red; break;
+	case 2: model.material.color = Color.blue; break;
+	case 3: model.material.color = Color.yellow; break;
 	}
-	*/
+	
 }

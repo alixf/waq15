@@ -1,0 +1,5 @@
+- cam recule quand perso court, et zoom quand perso marche
+- cam zoom quand perso meurt
+- cam dezoom quand partie se lance
+- lorsque perso vise : cam se decentre légèrement dans la direction de la visée
+- 

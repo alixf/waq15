@@ -6,6 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Seq02_Video.unity
+  - enabled: 1
+    path: Assets/Seq01_Video.unity
+  - enabled: 1
     path: Assets/titleScene.unity
   - enabled: 1
     path: Assets/test.unity

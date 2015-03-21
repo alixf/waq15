@@ -13,7 +13,7 @@ AnimatorController:
     m_DefaultFloat: .600000024
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -26,7 +26,7 @@ AnimatorController:
     m_DefaultWeight: 0
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_MultiThreadedStateMachine: 1
 --- !u!206 &20657408
 BlendTree:
@@ -82,74 +82,6 @@ BlendTree:
   m_UseAutomaticThresholds: 1
   m_NormalizedBlendValues: 0
   m_BlendType: 0
---- !u!1102 &110207034
-AnimatorState:
-  serializedVersion: 5
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: tenteStep2
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_Motion: {fileID: 7400000, guid: 3714f96dc99011a4c83319e9fe0f03cb, type: 2}
-  m_Tag: 
---- !u!1102 &110243226
-AnimatorState:
-  serializedVersion: 5
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: tenteStep4
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_Motion: {fileID: 7400000, guid: 02c3de687d0ec59458831369aba7d158, type: 2}
-  m_Tag: 
---- !u!1102 &110244678
-AnimatorState:
-  serializedVersion: 5
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: tenteStep5
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_Motion: {fileID: 7400000, guid: 32db696d4926e96469d2f628a3825e1c, type: 2}
-  m_Tag: 
---- !u!1102 &110248052
-AnimatorState:
-  serializedVersion: 5
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: tenteStep3
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_Motion: {fileID: 7400000, guid: cab7c791fba5f15489031cebc1d840bb, type: 2}
-  m_Tag: 
 --- !u!1102 &110256344
 AnimatorState:
   serializedVersion: 5
@@ -167,23 +99,6 @@ AnimatorState:
   m_Mirror: 0
   m_Motion: {fileID: 20657408}
   m_Tag: 
---- !u!1102 &110261958
-AnimatorState:
-  serializedVersion: 5
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: tenteStep1
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_Motion: {fileID: 7400000, guid: 3535d56f219e5f24a807c54df12c4e57, type: 2}
-  m_Tag: 
 --- !u!1107 &110782570
 AnimatorStateMachine:
   serializedVersion: 5
@@ -195,21 +110,6 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 110256344}
     m_Position: {x: 252, y: 120, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 110244678}
-    m_Position: {x: 252, y: 384, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 110243226}
-    m_Position: {x: 252, y: 348, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 110248052}
-    m_Position: {x: 252, y: 312, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 110207034}
-    m_Position: {x: 252, y: 276, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 110261958}
-    m_Position: {x: 252, y: 240, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []

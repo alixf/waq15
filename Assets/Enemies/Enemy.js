@@ -17,21 +17,21 @@ function Start()
 	var healthGauge = Instantiate(ui);
 	healthGauge.GetComponent.<UIFollow>().target = transform;
 	healthGauge.GetComponent.<HealthGaugeEnemy>().target = GetComponent.<SegmentedHealth>();
-	healthGauge.transform.SetParent(gameObject.Find("Canvas").transform);
+	//healthGauge.transform.SetParent(gameObject.Find("Canvas").transform);
 }
 
 function Update()
 {
+	if(GetComponent.<SegmentedHealth>().remainingHealth <= 0)
+		Destroy(gameObject);
+		
 	hitClock += Time.deltaTime;
 	var direction = (goal.position+goalOffset - transform.position);
 	direction.y = 0;
 	
 	this.GetComponent.<Rigidbody>().velocity = direction.normalized * speed;
 	
-	if(GetComponent.<SegmentedHealth>().remainingHealth <= 0)
-	{
-		Destroy(gameObject);
-	}
+	transform.LookAt(goal.transform.position);
 }
 
 function OnTriggerStay(collider : Collider)

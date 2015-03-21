@@ -15,7 +15,7 @@ GameObject:
   - 135: {fileID: 13539920}
   - 114: {fileID: 11487268}
   m_Layer: 10
-  m_Name: enemyRed
+  m_Name: R
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

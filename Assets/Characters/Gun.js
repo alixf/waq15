@@ -15,7 +15,8 @@ function Update()
 	clock += Time.deltaTime;
 	if(clock > 0.25)
 	{
-		if(Input.GetAxis("P"+controllerId+" A3") < -0.5)
+		var stick2 = new Vector2(Input.GetAxis("P"+controllerId+" A4"), Input.GetAxis("P"+controllerId+" A5"));
+		if(stick2.magnitude > 0.0)
 		{
 			clock = 0.0;
 			var spawn = Instantiate(bulletPrefab).transform;

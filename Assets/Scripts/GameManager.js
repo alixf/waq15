@@ -7,6 +7,8 @@ var pauseOverlay : Transform;
 var enemySpawner : EnemySpawner;
 private var pauseOpened = false;
 
+static var playersCount = 0;
+
 function Start ()
 {
 }

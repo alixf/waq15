@@ -14,7 +14,9 @@ var spawnLocations : Transform[];
 var goal : Transform;
 private var offset = new Vector3(0.1, 0.0, 0.0);
 
-public var waves : Wave[];
+var waves : Transform[];
+var wavesTiming : float[];
+
 private var currentWaveIndex = 0;
 
 private var clock = 0.0;
@@ -26,17 +28,26 @@ function Start ()
 function Update ()
 {
 	clock += Time.deltaTime;
-	if(currentWaveIndex < waves.Length && clock >= waves[currentWaveIndex].delay)
+	var delay : float = wavesTiming[currentWaveIndex];
+	if(currentWaveIndex < waves.Length && clock >= delay)
 	{
-		spawnRandom(waves[currentWaveIndex]);
+		spawnWave(waves[currentWaveIndex]);
 		currentWaveIndex++;
 	}
 }
 
-function spawnRandom(wave : Wave)
+function spawnWave(enemy : Transform)
 {
-	var waveType = (wave.type == 0) ? Mathf.Floor(Random.value * enemyPrefabs.Length) : wave.type-1;
-	var spawn = Instantiate(enemyPrefabs[waveType]).transform;
+	var spawn : Transform = null;
+	if(enemy == null)
+	{
+		var toSpawn = Mathf.Floor(Random.value * Mathf.Min(GameManager.playersCount, enemyPrefabs.Length));
+		spawn = Instantiate(enemyPrefabs[toSpawn]).transform;
+	}
+	else
+		spawn = Instantiate(enemy).transform;
+		
+	
 	spawn.position = spawnLocations[Mathf.Floor(Random.value * spawnLocations.length)].position + offset;
 	offset = -offset;
 	Instantiate(particlesSpawn,spawn.position,Quaternion.Euler(-90,0,0));

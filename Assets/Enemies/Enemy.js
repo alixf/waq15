@@ -32,17 +32,28 @@ function Update()
 	this.GetComponent.<Rigidbody>().velocity = direction.normalized * speed;
 	
 	transform.LookAt(goal.transform.position);
+	
+	transform.GetChild(0).GetComponent.<Animator>().SetFloat("random", Random.value);
 }
 
 function OnTriggerStay(collider : Collider)
 {
 	if(collider.CompareTag("hitZone"))
 	{
+		transform.GetChild(0).GetComponent.<Animator>().SetBool("shooting", true);
 		if(hitClock > hitDuration)
 		{
 			hitClock = 0.0;
 			collider.transform.parent.GetComponent.<Health>().health--;
 		}
+	}
+}
+
+function OnTriggerExit(collider : Collider)
+{
+	if(collider.CompareTag("hitZone"))
+	{
+		transform.GetChild(0).GetComponent.<Animator>().SetBool("shooting", false);
 	}
 }
 
@@ -61,4 +72,10 @@ function OnTriggerEnter(collider : Collider)
 			collider.GetComponent.<Bullet>().Die();
 		}
 	}
+}
+
+function Die()
+{
+	
+		transform.GetChild(0).GetComponent.<Animator>().SetTrigger("die");
 }

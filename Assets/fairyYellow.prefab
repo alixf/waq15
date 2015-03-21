@@ -257,6 +257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   controllerId: 3
+  created: 0
 --- !u!114 &11482316
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -268,7 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64a05dc82279c6640af97e8708f2b2d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 458418, guid: dde9c26ac7276d348941eeabc4864351, type: 2}
+  bulletPrefab: {fileID: 499032, guid: 35094fbd25cd68444a7c8b1fe15e7f58, type: 2}
   speed: 5
   bulletSpawnLocation: {fileID: 416474}
   controllerId: 3

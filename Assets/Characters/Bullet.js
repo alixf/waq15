@@ -1,7 +1,7 @@
 ﻿#pragma strict
 
 var distanceSpan = 1.0;
-var particlesDie : ParticleSystem;
+var particlesDie : ParticleSystem[];
 private var distance = 0.0;
 var color = 1;
 
@@ -23,6 +23,18 @@ function OnTriggerEnter(c : Collider)
 
 function Die()
 {
-	Instantiate(particlesDie,transform.position,Quaternion.Euler(-90,0,0));
+	Instantiate(particlesDie[color-1],transform.position,Quaternion.Euler(-90,0,0));
 	Destroy(this.gameObject);
+}
+
+function SetColor () {
+	if (color == 1){
+		GetComponent.<SpriteRenderer>().color = Color.yellow;
+	}
+	if (color == 2){
+		GetComponent.<SpriteRenderer>().color = Color.blue;
+	}
+	if (color == 3){
+		GetComponent.<SpriteRenderer>().color = Color.red;
+	}
 }

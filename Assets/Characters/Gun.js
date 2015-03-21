@@ -21,6 +21,9 @@ function Update()
 			clock = 0.0;
 			var spawn = Instantiate(bulletPrefab).transform;
 			spawn.position = bulletSpawnLocation.position;
+			spawn.rotation = Quaternion.Euler(40.2,15.8,11.4);
+			spawn.GetComponent.<Bullet>().color = controllerId + 1;
+			spawn.GetComponent.<Bullet>().SetColor();
 			spawn.GetComponent.<Rigidbody>().velocity = transform.forward.normalized * speed;
 			spawn.name = "bullet";
 			GameObject.Find("wandSound").GetComponent.<AudioSource>().Play();

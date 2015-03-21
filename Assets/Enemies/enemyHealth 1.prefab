@@ -60,12 +60,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 5
-    m_Right: 5
-    m_Top: 5
-    m_Bottom: 5
+    m_Left: 2
+    m_Right: 2
+    m_Top: 2
+    m_Bottom: 2
   m_ChildAlignment: 2
-  m_Spacing: 5
+  m_Spacing: 2
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
 --- !u!114 &11442092
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  offset: {x: 0, y: 50}
+  offset: {x: 0, y: 70}
 --- !u!222 &22214502
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -140,8 +140,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 227, y: 263}
-  m_SizeDelta: {x: 80, y: 20}
+  m_AnchoredPosition: {x: 227, y: 350}
+  m_SizeDelta: {x: 60, y: 15}
   m_Pivot: {x: .5, y: .5}
 --- !u!1001 &100100000
 Prefab:

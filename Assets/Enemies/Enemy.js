@@ -11,6 +11,8 @@ var color : int;
 var model : SkinnedMeshRenderer;
 var alive = true;
 var dead = false;
+var dieParticles : Transform;
+var freeze = false;
 
 function Start()
 {
@@ -37,7 +39,7 @@ function Update()
 	var direction = (goal.position+goalOffset - transform.position);
 	direction.y = 0;
 	
-	this.GetComponent.<Rigidbody>().velocity = alive ? direction.normalized * speed : Vector3.zero;
+	this.GetComponent.<Rigidbody>().velocity = (alive || freeze) ? direction.normalized * speed : Vector3.zero;
 	
 	transform.LookAt(goal.transform.position);
 	
@@ -64,7 +66,6 @@ function OnTriggerStay(collider : Collider)
 
 function SetColor(color : int)
 {
-Debug.Log(color);
 	this.color = color;
 	var trueColor : Color;
 	switch(color)
@@ -75,9 +76,7 @@ Debug.Log(color);
 	}
 	for(var i = 0; i < model.materials.Length; i++)
 	{
-	
-		print("ok");
-		model.materials[i].color = trueColor;
+		model.materials[i].SetColor("MainColor", trueColor);
 	}
 }
 
@@ -106,4 +105,21 @@ function Die()
 	transform.Find("animator").GetComponent.<Animator>().SetTrigger("Die");
 	GameObject.Find("enemyDie").GetComponent.<AudioSource>().Play();
 	dead = true;
+}
+
+function AfterDie()
+{
+	Instantiate(dieParticles, transform.position, Quaternion.identity);
+}
+
+function Freeze()
+{
+	FreezeCoroutine();
+}
+
+function FreezeCoroutine()
+{
+	freeze = true;
+	yield WaitForSeconds(3.0);
+	freeze = false;
 }

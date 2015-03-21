@@ -51,7 +51,6 @@ function Update ()
 				Input.GetAxis("P"+(i+1)+" A5") != 0.0f ||
 				Input.GetButtonDown("P"+(i+1)+" Start"))
 			{
-			print("fjznevihzv");
 				var fairy = Instantiate(fairyPrefab, fairyPrefab.position, fairyPrefab.rotation);
 				fairy.GetComponent.<Fairy>().SetColor(++playersCount);
 				fairy.GetComponent.<Fairy>().controllerId = (i+1);

@@ -3318,6 +3318,8 @@ MonoBehaviour:
   spawnRate: .25
   enemyPrefabs:
   - {fileID: 435876, guid: c8f5580f26a42e842a10a871cf29424f, type: 2}
+  - {fileID: 419866, guid: 57cff564c4d14db478737f7f0285e537, type: 2}
+  - {fileID: 491102, guid: 7708484966d471147a29098e5a421597, type: 2}
   particlesSpawn: {fileID: 19824890, guid: 7cc1138c3236b214a913f2e6a2d933ed, type: 2}
   spawnLocations:
   - {fileID: 1030883912}

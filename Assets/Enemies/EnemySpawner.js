@@ -27,12 +27,15 @@ function Start ()
 
 function Update ()
 {
-	clock += Time.deltaTime;
-	var delay : float = wavesTiming[currentWaveIndex];
-	if(currentWaveIndex < waves.Length && clock >= delay)
+	if(currentWaveIndex < waves.Length && currentWaveIndex < wavesTiming.Length)
 	{
-		spawnWave(waves[currentWaveIndex]);
-		currentWaveIndex++;
+		clock += Time.deltaTime;
+		var delay : float = wavesTiming[currentWaveIndex];
+		if(currentWaveIndex < waves.Length && clock >= delay)
+		{
+			spawnWave(waves[currentWaveIndex]);
+			currentWaveIndex++;
+		}
 	}
 }
 

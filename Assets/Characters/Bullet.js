@@ -16,6 +16,10 @@ function Update ()
 		Die();
 }
 
+function SetColor(color : int)
+{
+}
+
 function OnTriggerEnter(c : Collider)
 {
 	Die();

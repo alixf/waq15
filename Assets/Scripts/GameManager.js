@@ -8,6 +8,8 @@ var enemySpawner : EnemySpawner;
 private var pauseOpened = false;
 
 static var playersCount = 0;
+var fairyPrefab : Transform;
+var controllerMap = [false, false, false];
 
 function Start ()
 {
@@ -28,6 +30,26 @@ function Update ()
 	if(enemySpawner.IsFinished()) // Win
 	{
 		winOverlay.gameObject.SetActive(true);
+	}
+	
+	for(var i = 0; i < 3; i++)
+	{
+		if(controllerMap[i] == false)
+		{
+			if (Input.GetAxis("P"+(i+1)+" A1") != 0.0f ||
+				Input.GetAxis("P"+(i+1)+" A2") != 0.0f ||
+				Input.GetAxis("P"+(i+1)+" A3") != 0.0f ||
+				Input.GetAxis("P"+(i+1)+" A4") != 0.0f ||
+				Input.GetAxis("P"+(i+1)+" A5") != 0.0f ||
+				Input.GetButtonDown("P"+(i+1)+" Start"))
+			{
+				print("OK");
+				var fairy = Instantiate(fairyPrefab);
+				fairy.GetComponent.<FairyController>().SetColor(++playersCount);
+				fairy.GetComponent.<FairyController>().controllerId = (i+1);
+				controllerMap[i] = true;
+			}
+		}
 	}
 }
 

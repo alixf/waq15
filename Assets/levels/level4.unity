@@ -291,15 +291,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1124816151}
-        m_MethodName: Restart
-        m_Mode: 1
+        m_MethodName: LoadLevel
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: level5
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -1037,7 +1037,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11427384, guid: 216a80d1f3c2927409cece32f51c7e09, type: 2}
       propertyPath: waves.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 11427384, guid: 216a80d1f3c2927409cece32f51c7e09, type: 2}
       propertyPath: wavesTiming.Array.size
@@ -1078,42 +1078,42 @@ Prefab:
     - target: {fileID: 11427384, guid: 216a80d1f3c2927409cece32f51c7e09, type: 2}
       propertyPath: waves.Array.data[0]
       value: 
-      objectReference: {fileID: 410352, guid: bc81225e69c95334d946b1acdd5a9a29, type: 2}
+      objectReference: {fileID: 492384, guid: d45c3def030f3454eae45dded99d8b14, type: 2}
     - target: {fileID: 11427384, guid: 216a80d1f3c2927409cece32f51c7e09, type: 2}
       propertyPath: waves.Array.data[1]
       value: 
-      objectReference: {fileID: 496068, guid: aa2e2b52f0582db41a749f83e9111542, type: 2}
+      objectReference: {fileID: 463778, guid: 2e0a802413bb0ef4d8d1f9d4c65b4fb8, type: 2}
     - target: {fileID: 11427384, guid: 216a80d1f3c2927409cece32f51c7e09, type: 2}
       propertyPath: waves.Array.data[2]
       value: 
-      objectReference: {fileID: 463704, guid: 10f1ee4f79e9da34a9056eca168a34f7, type: 2}
+      objectReference: {fileID: 492384, guid: d45c3def030f3454eae45dded99d8b14, type: 2}
     - target: {fileID: 11427384, guid: 216a80d1f3c2927409cece32f51c7e09, type: 2}
       propertyPath: waves.Array.data[3]
       value: 
-      objectReference: {fileID: 410352, guid: bc81225e69c95334d946b1acdd5a9a29, type: 2}
+      objectReference: {fileID: 409682, guid: 2e2b45bbf3bcd844e9e839881d33b3ad, type: 2}
     - target: {fileID: 11427384, guid: 216a80d1f3c2927409cece32f51c7e09, type: 2}
       propertyPath: waves.Array.data[4]
       value: 
-      objectReference: {fileID: 463704, guid: 10f1ee4f79e9da34a9056eca168a34f7, type: 2}
+      objectReference: {fileID: 486402, guid: 246f290409e6dbe4c9a1b66933fb3616, type: 2}
     - target: {fileID: 11427384, guid: 216a80d1f3c2927409cece32f51c7e09, type: 2}
       propertyPath: waves.Array.data[5]
       value: 
-      objectReference: {fileID: 496068, guid: aa2e2b52f0582db41a749f83e9111542, type: 2}
+      objectReference: {fileID: 486402, guid: 246f290409e6dbe4c9a1b66933fb3616, type: 2}
     - target: {fileID: 11427384, guid: 216a80d1f3c2927409cece32f51c7e09, type: 2}
       propertyPath: wavesTiming.Array.data[0]
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11427384, guid: 216a80d1f3c2927409cece32f51c7e09, type: 2}
       propertyPath: wavesTiming.Array.data[1]
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 11427384, guid: 216a80d1f3c2927409cece32f51c7e09, type: 2}
       propertyPath: wavesTiming.Array.data[2]
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 11427384, guid: 216a80d1f3c2927409cece32f51c7e09, type: 2}
       propertyPath: wavesTiming.Array.data[3]
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 11427384, guid: 216a80d1f3c2927409cece32f51c7e09, type: 2}
       propertyPath: wavesTiming.Array.data[4]
@@ -1123,6 +1123,10 @@ Prefab:
       propertyPath: wavesTiming.Array.data[5]
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 11427384, guid: 216a80d1f3c2927409cece32f51c7e09, type: 2}
+      propertyPath: waves.Array.data[6]
+      value: 
+      objectReference: {fileID: 492384, guid: d45c3def030f3454eae45dded99d8b14, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 216a80d1f3c2927409cece32f51c7e09, type: 2}
   m_IsPrefabParent: 0

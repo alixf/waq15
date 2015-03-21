@@ -1607,11 +1607,12 @@ MonoBehaviour:
   goalOffset: {x: 0, y: 0, z: 0}
   health: 0
   ui: {fileID: 22416962, guid: a8b1c6d335fb32144896d38b30e01178, type: 2}
-  color: 2
+  color: 3
   model: {fileID: 13760602}
   alive: 1
   dead: 0
   dieParticles: {fileID: 425910, guid: 49bc84a6a3212444fa88512fcd5d7008, type: 2}
+  freeze: 0
 --- !u!114 &11497680
 MonoBehaviour:
   m_ObjectHideFlags: 1

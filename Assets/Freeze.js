@@ -1,9 +1,11 @@
 ﻿#pragma strict
 
 public var enemies : Transform;
-var clock = 0.0;
-var freezeCooldown = 5.0;
+var clock = 50000.0;
+var freezeCooldown = 0.0;
 var particles : Transform;
+var range = 500;
+var used = true;
 
 function Start()
 {
@@ -19,11 +21,11 @@ function Update()
 	if(Mathf.Abs(trigger) > 0.5 && clock > freezeCooldown)
 	{
 		clock = 0.0;
-		print("FREEZE");
-		for(enemy in enemies)
-		{
-			var enemyT : Transform = enemy;
-			enemyT.GetComponent.<Enemy>().Freeze();
-		}
+		Instantiate(particles, transform.position, transform.rotation);
+		transform.Find("freeze").gameObject.SetActive(true);
+	}
+	else
+	{
+		transform.Find("freeze").gameObject.SetActive(false);
 	}
 }

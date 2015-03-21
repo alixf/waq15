@@ -39,7 +39,7 @@ function Update()
 	var direction = (goal.position+goalOffset - transform.position);
 	direction.y = 0;
 	
-	this.GetComponent.<Rigidbody>().velocity = (alive || freeze) ? direction.normalized * speed : Vector3.zero;
+	this.GetComponent.<Rigidbody>().velocity = (alive && !freeze) ? direction.normalized * speed : Vector3.zero;
 	
 	transform.LookAt(goal.transform.position);
 	
@@ -97,6 +97,22 @@ function OnTriggerEnter(collider : Collider)
 		
 		GameObject.Find("enemyHit").GetComponent.<AudioSource>().Play();
 	}
+	if(collider.CompareTag("Freeze") && collider.transform.parent.GetComponent.<Fairy>().color != color)
+		Freeze();
+}
+
+function Freeze()
+{
+	FreezeCoroutine();
+}
+
+function FreezeCoroutine()
+{
+	freeze = true;
+	transform.Find("animator").GetComponent.<Animator>().enabled = false;
+	yield WaitForSeconds(3.0);
+	freeze = false;
+	transform.Find("animator").GetComponent.<Animator>().enabled = true;
 }
 
 function Die()
@@ -110,16 +126,4 @@ function Die()
 function AfterDie()
 {
 	Instantiate(dieParticles, transform.position, Quaternion.identity);
-}
-
-function Freeze()
-{
-	FreezeCoroutine();
-}
-
-function FreezeCoroutine()
-{
-	freeze = true;
-	yield WaitForSeconds(3.0);
-	freeze = false;
 }

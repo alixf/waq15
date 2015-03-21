@@ -538,8 +538,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 477282}
   - 95: {fileID: 9544550}
+  - 114: {fileID: 11420684}
   m_Layer: 0
-  m_Name: model
+  m_Name: animator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1155,7 +1156,7 @@ GameObject:
   - 4: {fileID: 403672}
   - 137: {fileID: 13762584}
   m_Layer: 0
-  m_Name: Gobelin
+  m_Name: model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1643,9 +1644,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 105812}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.74000001, y: 0, z: 2.8599999}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: .978748143, z: 0, w: .205066189}
+  m_LocalPosition: {x: 0, y: 0, z: -2.7750001}
+  m_LocalScale: {x: .670000017, y: .670000017, z: .670000017}
   m_Children:
   - {fileID: 477282}
   m_Father: {fileID: 0}
@@ -2361,6 +2362,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11420684
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 134868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03a781bad666e94e80eb09d5d7169b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11448950
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2373,12 +2385,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goal: {fileID: 0}
-  speed: 1
+  speed: .699999988
   hitDuration: 1.25
   goalOffset: {x: 0, y: 0, z: 0}
   health: 0
   ui: {fileID: 22416962, guid: a8b1c6d335fb32144896d38b30e01178, type: 2}
   color: 2
+  model: {fileID: 13762584}
+  alive: 1
 --- !u!114 &11492380
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2391,10 +2405,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   segments:
-  - color: 3
+  - color: 1
     health: 2
     maxHealth: 0
-  - color: 3
+  - color: 1
     health: 2
     maxHealth: 0
   currentSegment: 0

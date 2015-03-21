@@ -17,6 +17,7 @@ var winOpened = false;
 
 function Start ()
 {
+	playersCount = 0;
 }
 
 function Update ()
@@ -62,12 +63,13 @@ function Update ()
 
 public function Restart()
 {
-	playersCount = 0;
+	print("ok");
 	Application.LoadLevel(Application.loadedLevel);
 }
 
 public function Quit()
 {
+	print("quit");
 	Application.Quit();
 }
 public function TogglePause()
@@ -80,4 +82,9 @@ public function TogglePause()
 		//gameObject.Find("resumeButton").GetComponent.<UI.Button>().Select();
 		}
 	Time.timeScale = pauseOpened ? 0.0 : 1.0;
+}
+
+function LoadLevel(name : String)
+{
+	Application.LoadLevel(name);
 }

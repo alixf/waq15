@@ -19,10 +19,10 @@ function FixedUpdate()
 	if(stick1.magnitude > 0.0)
 	{
 		var direction = new Vector3(stick1.x, 0.0, stick1.y);
-		GetComponent.<Rigidbody>().velocity = direction.normalized * speed;
+		GetComponent.<Rigidbody>().velocity = Vector3.Slerp(GetComponent.<Rigidbody>().velocity.normalized, direction.normalized, 0.33) * speed;
 	}
 	else
-		GetComponent.<Rigidbody>().velocity = Vector3.zero;
+		GetComponent.<Rigidbody>().velocity = Vector3.Lerp(GetComponent.<Rigidbody>().velocity, Vector3.zero, 0.2);
 }
 
 function SetColor(color : int)

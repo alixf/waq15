@@ -20,6 +20,8 @@ function Start()
 	healthGauge.GetComponent.<UIFollow>().target = transform;
 	healthGauge.GetComponent.<HealthGaugeEnemy>().target = GetComponent.<SegmentedHealth>();
 	healthGauge.transform.SetParent(gameObject.Find("Canvas").transform);
+	
+	GameObject.Find("enemyWalk").GetComponent.<AudioSource>().Play();
 }
 
 function Update()
@@ -34,7 +36,7 @@ function Update()
 	var direction = (goal.position+goalOffset - transform.position);
 	direction.y = 0;
 	
-	this.GetComponent.<Rigidbody>().velocity = direction.normalized * speed;
+	this.GetComponent.<Rigidbody>().velocity = alive ? direction.normalized * speed : Vector3.zero;
 	
 	transform.LookAt(goal.transform.position);
 	
@@ -78,20 +80,16 @@ function OnTriggerEnter(collider : Collider)
 {
 	if(collider.CompareTag("Bullet") && collider.GetComponent.<Bullet>().color == GetComponent.<SegmentedHealth>().GetCurrentColor())
 	{
-		if(GetComponent.<Health>())
-		{
-			GetComponent.<Health>().health--;
-			collider.GetComponent.<Bullet>().Die();
-		}
-		else if(GetComponent.<SegmentedHealth>())
-		{
-			GetComponent.<SegmentedHealth>().doDamage(1.0);
-			collider.GetComponent.<Bullet>().Die();
-		}
+		GetComponent.<SegmentedHealth>().doDamage(1.0);
+		collider.GetComponent.<Bullet>().Die();
+		
+		GameObject.Find("enemyHit").GetComponent.<AudioSource>().Play();
 	}
 }
 
 function Die()
 {
-	transform.GetChild(0).GetComponent.<Animator>().SetTrigger("Die");
+	GetComponent.<Collider>().enabled = false;
+	transform.Find("animator").GetComponent.<Animator>().SetTrigger("Die");
+		GameObject.Find("enemyDie").GetComponent.<AudioSource>().Play();
 }

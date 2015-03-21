@@ -12,6 +12,8 @@ private var pauseOpened = false;
 static var playersCount = 0;
 var fairyPrefab : Transform;
 var controllerMap = [false, false, false];
+var gameOverOpened = false;
+var winOpened = false;
 
 function Start ()
 {
@@ -19,17 +21,23 @@ function Start ()
 
 function Update ()
 {
-	if(goal.health <= 0) // Game Over
+	if(goal.health <= 0 && !gameOverOpened) // Game Over
 	{
+		gameOverOpened = true;
 		gameOverOverlay.gameObject.SetActive(true);
+		GameObject.Find("arena_loop").GetComponent.<AudioSource>().Stop();
+		GameObject.Find("gameOverMusic").GetComponent.<AudioSource>().Play();
 	}
 	if(Input.GetButtonDown("P1 Start") || Input.GetButtonDown("P2 Start") || Input.GetButtonDown("P3 Start")) // Pause
 	{
 		TogglePause();
 	}
-	if(enemySpawner.IsFinished()) // Win
+	if(enemySpawner.IsFinished() && !winOpened) // Win
 	{
+		winOpened = true;
 		winOverlay.gameObject.SetActive(true);
+		GameObject.Find("arena_loop").GetComponent.<AudioSource>().Stop();
+		GameObject.Find("winMusic").GetComponent.<AudioSource>().Play();
 	}
 	
 	for(var i = 0; i < 3; i++)
@@ -54,6 +62,7 @@ function Update ()
 
 public function Restart()
 {
+	playersCount = 0;
 	Application.LoadLevel(Application.loadedLevel);
 }
 

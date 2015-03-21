@@ -1198,7 +1198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 499032, guid: 35094fbd25cd68444a7c8b1fe15e7f58, type: 2}
-  speed: 3.70000005
+  speed: 7
   bulletSpawnLocation: {fileID: 474492}
 --- !u!114 &11463980
 MonoBehaviour:

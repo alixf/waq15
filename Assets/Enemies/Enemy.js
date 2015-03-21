@@ -10,7 +10,6 @@ var ui : Transform;
 var color : int;
 var model : SkinnedMeshRenderer;
 var alive = true;
-var dead = 0.0;
 
 function Start()
 {
@@ -37,7 +36,7 @@ function Update()
 	var direction = (goal.position+goalOffset - transform.position);
 	direction.y = 0;
 	
-	this.GetComponent.<Rigidbody>().velocity = direction.normalized * speed;
+	this.GetComponent.<Rigidbody>().velocity = alive ? direction.normalized * speed : Vector3.zero;
 	
 	transform.LookAt(goal.transform.position);
 	
@@ -83,7 +82,6 @@ function OnTriggerEnter(collider : Collider)
 	{
 		GetComponent.<SegmentedHealth>().doDamage(1.0);
 		collider.GetComponent.<Bullet>().Die();
-		var dead = true;
 		
 		GameObject.Find("enemyHit").GetComponent.<AudioSource>().Play();
 	}
@@ -92,6 +90,6 @@ function OnTriggerEnter(collider : Collider)
 function Die()
 {
 	GetComponent.<Collider>().enabled = false;
-	transform.GetChild(0).GetComponent.<Animator>().SetTrigger("Die");
+	transform.Find("animator").GetComponent.<Animator>().SetTrigger("Die");
 		GameObject.Find("enemyDie").GetComponent.<AudioSource>().Play();
 }

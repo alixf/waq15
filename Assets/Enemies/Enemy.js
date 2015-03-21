@@ -10,6 +10,7 @@ var ui : Transform;
 var color : int;
 var model : SkinnedMeshRenderer;
 var alive = true;
+var dead = false;
 
 function Start()
 {
@@ -41,6 +42,11 @@ function Update()
 	transform.LookAt(goal.transform.position);
 	
 	transform.GetChild(0).GetComponent.<Animator>().SetFloat("random", Random.value);
+	
+	if(!alive && !dead)
+	{
+		Die();
+	}
 }
 
 function OnTriggerStay(collider : Collider)
@@ -60,11 +66,18 @@ function SetColor(color : int)
 {
 Debug.Log(color);
 	this.color = color;
+	var trueColor : Color;
 	switch(color)
 	{
-	case 1: model.material.color = Color.red; break;
-	case 2: model.material.color = Color.blue; break;
-	case 3: model.material.color = Color.yellow; break;
+	case 1: trueColor = Color.red; break;
+	case 2: trueColor = Color.blue; break;
+	case 3: trueColor = Color.yellow; break;
+	}
+	for(var i = 0; i < model.materials.Length; i++)
+	{
+	
+		print("ok");
+		model.materials[i].color = trueColor;
 	}
 }
 
@@ -91,5 +104,6 @@ function Die()
 {
 	GetComponent.<Collider>().enabled = false;
 	transform.Find("animator").GetComponent.<Animator>().SetTrigger("Die");
-		GameObject.Find("enemyDie").GetComponent.<AudioSource>().Play();
+	GameObject.Find("enemyDie").GetComponent.<AudioSource>().Play();
+	dead = true;
 }
